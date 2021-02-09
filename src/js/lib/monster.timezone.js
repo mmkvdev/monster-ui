@@ -662,9 +662,9 @@ define(function(require) {
 
 			$.each(self.list, function(i, data) {
 				if (selected === data) {
-					dropdown.append('<option value="' + data + '" selected>' + data + '</option>');
+					dropdown.append('<option value="' + data + '" selected>' + data.replace(/_/g, ' ') + '</option>');
 				} else {
-					dropdown.append('<option value="' + data + '">' + data + '</option>');
+					dropdown.append('<option value="' + data + '">' + data.replace(/_/g, ' ') + '</option>');
 				}
 			});
 
